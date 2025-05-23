@@ -1,0 +1,40 @@
+[gd_scene load_steps=3 format=3 uid="uid://cruifly2l4tvi"]
+
+[ext_resource type="Texture2D" uid="uid://ib6322ffov1h" path="res://Inventory/Inventory_res/icon_inv3.png" id="1_kowcg"]
+[ext_resource type="Script" uid="uid://d17k2wwf06pud" path="res://Scripts/big_inv_slot.gd" id="1_qjker"]
+
+[node name="Big_inv_slot" type="Panel"]
+custom_minimum_size = Vector2(116, 142)
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 1.00002
+offset_top = 1.0
+offset_right = -1803.0
+offset_bottom = -937.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(3.37736, 3.39152)
+script = ExtResource("1_qjker")
+
+[node name="IconInv3" type="Sprite2D" parent="."]
+position = Vector2(58.1151, 71.8416)
+texture = ExtResource("1_kowcg")
+
+[node name="CenterContainer" type="CenterContainer" parent="."]
+layout_mode = 0
+offset_right = 114.0
+offset_bottom = 141.0
+
+[node name="Panel" type="Panel" parent="CenterContainer"]
+layout_mode = 2
+
+[node name="Cathegory_display" type="Sprite2D" parent="CenterContainer/Panel"]
+
+[node name="Label" type="Label" parent="CenterContainer/Panel"]
+layout_mode = 0
+offset_left = -54.996
+offset_top = -67.0066
+offset_right = 57.004
+offset_bottom = -44.0066
+text = "U i a o U i u a"

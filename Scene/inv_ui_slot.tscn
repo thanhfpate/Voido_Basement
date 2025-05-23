@@ -1,0 +1,45 @@
+[gd_scene load_steps=3 format=3 uid="uid://557ork8ealjg"]
+
+[ext_resource type="Script" uid="uid://yxdbyn0okivk" path="res://Scripts/inv_ui_slot.gd" id="1_80kf7"]
+[ext_resource type="Texture2D" uid="uid://cvcfhaylg5rp6" path="res://Inventory/Inventory_res/icon_inv1.png" id="1_umklo"]
+
+[node name="Inv_ui_slot" type="Panel"]
+self_modulate = Color(1, 1, 1, 0)
+custom_minimum_size = Vector2(125, 150)
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 1.0
+offset_top = 3.0
+offset_right = -1794.0
+offset_bottom = -927.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_80kf7")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(58, 61)
+texture = ExtResource("1_umklo")
+
+[node name="CenterContainer" type="CenterContainer" parent="."]
+custom_minimum_size = Vector2(115, 126)
+layout_mode = 0
+offset_left = 1.0
+offset_top = -1.0
+offset_right = 116.0
+offset_bottom = 125.0
+
+[node name="Panel" type="Panel" parent="CenterContainer"]
+layout_mode = 2
+
+[node name="Item_display" type="Sprite2D" parent="CenterContainer/Panel"]
+
+[node name="Label" type="Label" parent="CenterContainer/Panel"]
+modulate = Color(0.126185, 0.0978037, 2.40654e-08, 1)
+layout_mode = 0
+offset_left = -9.0
+offset_top = 31.0
+offset_right = 47.0
+offset_bottom = 54.0
+text = "99"
+horizontal_alignment = 2

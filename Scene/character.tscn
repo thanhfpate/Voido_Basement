@@ -1,0 +1,181 @@
+[gd_scene load_steps=22 format=3 uid="uid://byjo10yl8fd8y"]
+
+[ext_resource type="Script" uid="uid://bssf0nmmchy6x" path="res://Scripts/Character.gd" id="1_tysx3"]
+[ext_resource type="Resource" uid="uid://dhnbye7d6qxur" path="res://Inventory/Item/Player_inv.tres" id="2_73ll3"]
+[ext_resource type="Texture2D" uid="uid://c5x36lj8fpgp7" path="res://Res/Character/anim-voido/VoidoWalkGif1.png" id="2_g04da"]
+[ext_resource type="Texture2D" uid="uid://4h145caibi3x" path="res://Res/Character/anim-voido/VoidoWalkGif7.png" id="3_b1dg5"]
+[ext_resource type="Texture2D" uid="uid://cppygljhkwvwl" path="res://Res/Character/anim-voido/VoidoWalkGif10.png" id="4_eokbm"]
+[ext_resource type="Texture2D" uid="uid://1re8dnpl3vp2" path="res://Res/Character/anim-voido/VoidoWalkGif4.png" id="5_6ravw"]
+[ext_resource type="Texture2D" uid="uid://d2v2nrceakkbm" path="res://Res/Character/anim-voido/VoidoWalkGif2.png" id="6_rw1tn"]
+[ext_resource type="Texture2D" uid="uid://drvy14meqnfgo" path="res://Res/Character/anim-voido/VoidoWalkGif3.png" id="7_10s7p"]
+[ext_resource type="Texture2D" uid="uid://byql617xjypac" path="res://Res/Character/anim-voido/VoidoWalkGif8.png" id="8_ssqca"]
+[ext_resource type="Texture2D" uid="uid://c6jf5hrrk54t2" path="res://Res/Character/anim-voido/VoidoWalkGif9.png" id="9_ewnxw"]
+[ext_resource type="Texture2D" uid="uid://bxj1bi44wg7ds" path="res://Res/Character/anim-voido/VoidoWalkGif11.png" id="10_pbdho"]
+[ext_resource type="Texture2D" uid="uid://8iisliipjsa5" path="res://Res/Character/anim-voido/VoidoWalkGif12.png" id="11_cqhpf"]
+[ext_resource type="Texture2D" uid="uid://cqa6r7j0u376y" path="res://Res/Character/anim-voido/VoidoWalkGif5.png" id="12_qtcew"]
+[ext_resource type="Texture2D" uid="uid://c06nd4v14uh4n" path="res://Res/Character/anim-voido/VoidoWalkGif6.png" id="13_kfv55"]
+[ext_resource type="Script" uid="uid://6fuguw6iym6f" path="res://Scripts/Action_button.gd" id="15_dqih8"]
+[ext_resource type="Texture2D" uid="uid://c8n710n06y7x0" path="res://Res/UI/button_test.png" id="15_fukdh"]
+[ext_resource type="PackedScene" uid="uid://co1hqjoa1m4cd" path="res://Scene/Menu_button.tscn" id="17_bbgwi"]
+[ext_resource type="PackedScene" uid="uid://ctgkcixc6ry87" path="res://Scene/Joystick.tscn" id="18_cx77s"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_odr31"]
+radius = 14.1421
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_83ej2"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_g04da")
+}],
+"loop": true,
+"name": &"Idle_Down",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("3_b1dg5")
+}],
+"loop": true,
+"name": &"Idle_Left",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("4_eokbm")
+}],
+"loop": true,
+"name": &"Idle_Right",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("5_6ravw")
+}],
+"loop": true,
+"name": &"Idle_Up",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_g04da")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_rw1tn")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_10s7p")
+}],
+"loop": true,
+"name": &"Walk_Down",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("3_b1dg5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_ssqca")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_ewnxw")
+}],
+"loop": true,
+"name": &"Walk_Left",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("4_eokbm")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_pbdho")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_cqhpf")
+}],
+"loop": true,
+"name": &"Walk_Right",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("5_6ravw")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_qtcew")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_kfv55")
+}],
+"loop": true,
+"name": &"Walk_Up",
+"speed": 5.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_7d750"]
+radius = 25.0
+
+[node name="Character" type="CharacterBody2D"]
+platform_floor_layers = 4294967041
+script = ExtResource("1_tysx3")
+inv = ExtResource("2_73ll3")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+scale = Vector2(2.07657, 2.24506)
+shape = SubResource("CircleShape2D_odr31")
+
+[node name="Flan" type="Node2D" parent="."]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Flan"]
+scale = Vector2(0.986087, 1.02825)
+sprite_frames = SubResource("SpriteFrames_83ej2")
+animation = &"Walk_Up"
+
+[node name="DetectionArea" type="Area2D" parent="Flan"]
+scale = Vector2(1.98661, 1.9439)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Flan/DetectionArea"]
+texture_filter = 1
+position = Vector2(0, 1)
+shape = SubResource("CircleShape2D_7d750")
+one_way_collision_margin = 0.0
+
+[node name="Camera2D" type="Camera2D" parent="."]
+z_index = 12
+zoom = Vector2(2, 2)
+
+[node name="Joystick" parent="Camera2D" instance=ExtResource("18_cx77s")]
+position = Vector2(-376, 170)
+scale = Vector2(0.764539, 0.74576)
+
+[node name="Action_button" type="Node2D" parent="Camera2D"]
+script = ExtResource("15_dqih8")
+
+[node name="ButtonTest" type="Sprite2D" parent="Camera2D/Action_button"]
+position = Vector2(400, 194)
+scale = Vector2(1.84424, 1.81702)
+texture = ExtResource("15_fukdh")
+
+[node name="Button" type="Button" parent="Camera2D/Action_button/ButtonTest"]
+modulate = Color(1, 1, 1, 0)
+anchors_preset = -1
+anchor_left = 0.953
+anchor_top = 1.0
+anchor_right = 0.953
+anchor_bottom = 1.0
+offset_left = -90.992
+offset_top = -95.0
+offset_right = -31.992
+offset_bottom = -31.0
+action_mode = 0
+metadata/_edit_use_anchors_ = true
+
+[node name="Menu_button" parent="Camera2D" instance=ExtResource("17_bbgwi")]
+position = Vector2(-299, -261)
+
+[connection signal="body_shape_entered" from="Flan/DetectionArea" to="." method="_on_detection_area_body_shape_entered"]
+[connection signal="body_shape_exited" from="Flan/DetectionArea" to="." method="_on_detection_area_body_shape_exited"]
+[connection signal="button_down" from="Camera2D/Action_button/ButtonTest/Button" to="." method="_on_button_button_down"]
+[connection signal="button_up" from="Camera2D/Action_button/ButtonTest/Button" to="." method="_on_button_button_up"]
+[connection signal="toggled" from="Camera2D/Action_button/ButtonTest/Button" to="." method="_on_button_toggled"]

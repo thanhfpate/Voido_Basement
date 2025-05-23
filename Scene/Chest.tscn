@@ -1,0 +1,37 @@
+[gd_scene load_steps=8 format=3 uid="uid://yex2xilktl2o"]
+
+[ext_resource type="Script" uid="uid://c0du88rben04i" path="res://Scripts/quest_item.gd" id="1_id6lg"]
+[ext_resource type="Texture2D" uid="uid://dgus16gow2qnh" path="res://icon.svg" id="1_y75mo"]
+[ext_resource type="Script" uid="uid://cmgb4o0863yqy" path="res://Inventory/Inventory_item.gd" id="2_wu3tn"]
+[ext_resource type="Texture2D" uid="uid://b4ri108rd1bk1" path="res://Res/Item/apple.png" id="3_f40vd"]
+
+[sub_resource type="Resource" id="Resource_i61eo"]
+script = ExtResource("2_wu3tn")
+name = "Apple"
+texture = ExtResource("3_f40vd")
+metadata/_custom_type_script = "uid://cmgb4o0863yqy"
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_hd1f5"]
+size = Vector2(115, 114)
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_4glhk"]
+radius = 105.119
+
+[node name="Chest" type="Node2D"]
+scale = Vector2(0.437783, 0.424823)
+script = ExtResource("1_id6lg")
+item = SubResource("Resource_i61eo")
+
+[node name="Icon" type="Sprite2D" parent="."]
+position = Vector2(-6, -4)
+texture = ExtResource("1_y75mo")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-5.5, -5)
+shape = SubResource("RectangleShape2D_hd1f5")
+
+[node name="Item_collection" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Item_collection"]
+position = Vector2(-5, 1)
+shape = SubResource("CircleShape2D_4glhk")

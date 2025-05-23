@@ -1,0 +1,77 @@
+[gd_scene load_steps=3 format=3 uid="uid://beluwa2x5tos7"]
+
+[ext_resource type="Script" uid="uid://dtqch8sfc3764" path="res://Scripts/UI.gd" id="1_gamjr"]
+[ext_resource type="Texture2D" uid="uid://v112tjnvy64o" path="res://addons/frame.png" id="2_3iunn"]
+
+[node name="Menu" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -484.0
+offset_top = -177.0
+offset_right = -484.0
+offset_bottom = -177.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(2.25011, 2.25011)
+size_flags_stretch_ratio = 4.68
+script = ExtResource("1_gamjr")
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+layout_mode = 0
+offset_left = 640.0
+offset_top = 412.0
+offset_right = 1240.0
+offset_bottom = 671.0
+
+[node name="Frame" type="Sprite2D" parent="."]
+texture_filter = 1
+position = Vector2(605, 167)
+texture = ExtResource("2_3iunn")
+
+[node name="Playbutton" type="Button" parent="Frame"]
+texture_filter = 1
+offset_left = -189.909
+offset_top = -23.007
+offset_right = 186.091
+offset_bottom = 45.993
+theme_type_variation = &"FlatButton"
+theme_override_font_sizes/font_size = 25
+action_mode = 0
+text = "Play"
+
+[node name="Frame2" type="Sprite2D" parent="."]
+texture_filter = 1
+position = Vector2(602, 309)
+texture = ExtResource("2_3iunn")
+
+[node name="Settingbutton" type="Button" parent="Frame2"]
+texture_filter = 1
+offset_left = -191.0
+offset_top = -25.0
+offset_right = 185.0
+offset_bottom = 44.0
+theme_type_variation = &"FlatButton"
+theme_override_font_sizes/font_size = 25
+text = "Setting"
+
+[node name="Frame3" type="Sprite2D" parent="."]
+texture_filter = 1
+position = Vector2(606, 461)
+texture = ExtResource("2_3iunn")
+
+[node name="Exitbutton" type="Button" parent="Frame3"]
+texture_filter = 1
+offset_left = -191.0
+offset_top = -25.0
+offset_right = 185.0
+offset_bottom = 44.0
+theme_type_variation = &"FlatButton"
+theme_override_font_sizes/font_size = 25
+text = "Exit"
+
+[connection signal="focus_entered" from="Frame/Playbutton" to="." method="_on_playbutton_focus_entered"]
+[connection signal="pressed" from="Frame/Playbutton" to="." method="_on_playbutton_pressed"]
+[connection signal="tree_entered" from="Frame/Playbutton" to="." method="_on_playbutton_tree_entered"]
+[connection signal="pressed" from="Frame3/Exitbutton" to="." method="_on_exitbutton_pressed"]

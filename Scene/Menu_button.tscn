@@ -1,0 +1,47 @@
+[gd_scene load_steps=4 format=3 uid="uid://co1hqjoa1m4cd"]
+
+[ext_resource type="Script" uid="uid://h2g166uo0w8" path="res://Scripts/Menu.gd" id="1_pnoop"]
+[ext_resource type="Texture2D" uid="uid://b6wb0w8efguku" path="res://Res/UI/soul_menu_69.png" id="2_ftcjn"]
+[ext_resource type="Texture2D" uid="uid://ctuf0bo3ctlbr" path="res://Res/UI/soul.png" id="3_kno1t"]
+
+[node name="Menu_button" type="Node2D" node_paths=PackedStringArray("menu_screen", "popup")]
+position = Vector2(158, -8)
+script = ExtResource("1_pnoop")
+menu_screen = NodePath("Menu_screen")
+popup = NodePath("Popup_button")
+
+[node name="Menu_screen" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(318, 269)
+scale = Vector2(0.373861, 0.373861)
+texture = ExtResource("2_ftcjn")
+
+[node name="Closebutton" type="Button" parent="Menu_screen"]
+modulate = Color(1, 1, 1, 0)
+offset_left = -90.0
+offset_top = -157.0
+offset_right = 88.0
+offset_bottom = 132.0
+
+[node name="Inventory_button" type="Button" parent="Menu_screen"]
+offset_left = -131.0
+offset_top = -479.0
+offset_right = 131.0
+offset_bottom = -219.0
+
+[node name="Popup_button" type="Sprite2D" parent="."]
+position = Vector2(-128.5, 33.5)
+scale = Vector2(1.28125, 1.28125)
+texture = ExtResource("3_kno1t")
+
+[node name="Open_menu" type="Button" parent="Popup_button"]
+modulate = Color(1, 1, 1, 0)
+offset_left = -10.0
+offset_top = -15.0
+offset_right = 10.0
+offset_bottom = 16.0
+metadata/_edit_use_anchors_ = true
+
+[connection signal="pressed" from="Menu_screen/Closebutton" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="Menu_screen/Inventory_button" to="." method="_on_inventory_button_pressed"]
+[connection signal="pressed" from="Popup_button/Open_menu" to="." method="_on_open_menu_pressed"]
