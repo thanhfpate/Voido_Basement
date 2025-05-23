@@ -1,7 +1,7 @@
 [gd_scene load_steps=8 format=3 uid="uid://yex2xilktl2o"]
 
 [ext_resource type="Script" uid="uid://c0du88rben04i" path="res://Scripts/quest_item.gd" id="1_id6lg"]
-[ext_resource type="Texture2D" uid="uid://dgus16gow2qnh" path="res://icon.svg" id="1_y75mo"]
+[ext_resource type="Texture2D" uid="uid://djmo5usanlqj8" path="res://icon.svg" id="1_y75mo"]
 [ext_resource type="Script" uid="uid://cmgb4o0863yqy" path="res://Inventory/Inventory_item.gd" id="2_wu3tn"]
 [ext_resource type="Texture2D" uid="uid://b4ri108rd1bk1" path="res://Res/Item/apple.png" id="3_f40vd"]
 
