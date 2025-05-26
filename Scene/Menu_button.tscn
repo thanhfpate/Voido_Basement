@@ -11,6 +11,7 @@ menu_screen = NodePath("Menu_screen")
 popup = NodePath("Popup_button")
 
 [node name="Menu_screen" type="Sprite2D" parent="."]
+visible = false
 position = Vector2(318, 269)
 scale = Vector2(0.373861, 0.373861)
 texture = ExtResource("2_ftcjn")
@@ -29,7 +30,7 @@ offset_right = 133.0
 offset_bottom = -211.0
 theme_type_variation = &"FlatButton"
 
-[node name="Button" type="Button" parent="Menu_screen"]
+[node name="menu_button" type="Button" parent="Menu_screen"]
 offset_left = 185.0
 offset_top = -324.0
 offset_right = 461.0
@@ -51,5 +52,5 @@ metadata/_edit_use_anchors_ = true
 
 [connection signal="pressed" from="Menu_screen/Closebutton" to="." method="_on_button_pressed"]
 [connection signal="pressed" from="Menu_screen/Inventory_button" to="." method="_on_inventory_button_pressed"]
-[connection signal="tree_entered" from="Menu_screen/Button" to="." method="_on_button_tree_entered"]
+[connection signal="pressed" from="Menu_screen/menu_button" to="." method="_on_menu_button_pressed"]
 [connection signal="pressed" from="Popup_button/Open_menu" to="." method="_on_open_menu_pressed"]

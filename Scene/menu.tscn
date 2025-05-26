@@ -20,10 +20,10 @@ script = ExtResource("1_gamjr")
 
 [node name="MarginContainer" type="MarginContainer" parent="."]
 layout_mode = 0
-offset_left = 640.0
-offset_top = 412.0
-offset_right = 1240.0
-offset_bottom = 671.0
+offset_left = 201.0
+offset_top = 66.0
+offset_right = 1074.0
+offset_bottom = 568.0
 
 [node name="Frame" type="Sprite2D" parent="."]
 texture_filter = 1

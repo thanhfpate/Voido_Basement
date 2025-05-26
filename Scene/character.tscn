@@ -68,7 +68,7 @@ animations = [{
 }],
 "loop": true,
 "name": &"Walk_Down",
-"speed": 5.0
+"speed": 7.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -82,7 +82,7 @@ animations = [{
 }],
 "loop": true,
 "name": &"Walk_Left",
-"speed": 5.0
+"speed": 7.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -96,7 +96,7 @@ animations = [{
 }],
 "loop": true,
 "name": &"Walk_Right",
-"speed": 5.0
+"speed": 7.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -110,7 +110,7 @@ animations = [{
 }],
 "loop": true,
 "name": &"Walk_Up",
-"speed": 5.0
+"speed": 7.0
 }]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_7d750"]
@@ -131,6 +131,7 @@ shape = SubResource("CircleShape2D_odr31")
 scale = Vector2(0.986087, 1.02825)
 sprite_frames = SubResource("SpriteFrames_83ej2")
 animation = &"Walk_Up"
+frame_progress = 0.790722
 
 [node name="DetectionArea" type="Area2D" parent="Flan"]
 scale = Vector2(1.98661, 1.9439)

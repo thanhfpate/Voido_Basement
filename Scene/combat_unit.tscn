@@ -130,7 +130,7 @@ animations = [{
 }],
 "loop": true,
 "name": &"medium",
-"speed": 5.0
+"speed": 11.0
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_t5tbv"]
@@ -139,13 +139,14 @@ size = Vector2(204, 298)
 [node name="Combat_unit" type="Node2D"]
 
 [node name="CharacterBody2D" type="CharacterBody2D" parent="."]
+texture_filter = 1
 position = Vector2(1001, 659)
 script = ExtResource("1_t5tbv")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="CharacterBody2D"]
 sprite_frames = SubResource("SpriteFrames_1o88o")
 animation = &"medium"
-frame = 1
+frame_progress = 0.203967
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D"]
 position = Vector2(5, 95)

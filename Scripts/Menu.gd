@@ -20,8 +20,9 @@ func _on_button_pressed():
 
 func _on_inventory_button_pressed():
 	get_tree().change_scene_to_file("res://Scene/inv_ui.tscn")
+	
 
 
-func _on_button_tree_entered():
+func _on_menu_button_pressed():
 	get_tree().change_scene_to_file("res://Scene/menu.tscn")
 	pass # Replace with function body.
