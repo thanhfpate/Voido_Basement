@@ -27,23 +27,22 @@ offset_bottom = 671.0
 
 [node name="Frame" type="Sprite2D" parent="."]
 texture_filter = 1
-position = Vector2(605, 167)
+position = Vector2(643.08, 168.881)
 texture = ExtResource("2_3iunn")
 
-[node name="Playbutton" type="Button" parent="Frame"]
+[node name="Button" type="Button" parent="Frame"]
 texture_filter = 1
-offset_left = -189.909
-offset_top = -23.007
-offset_right = 186.091
-offset_bottom = 45.993
+offset_left = -188.0
+offset_top = -29.0
+offset_right = 182.0
+offset_bottom = 48.0
 theme_type_variation = &"FlatButton"
-theme_override_font_sizes/font_size = 25
-action_mode = 0
+theme_override_font_sizes/font_size = 28
 text = "Play"
 
 [node name="Frame2" type="Sprite2D" parent="."]
 texture_filter = 1
-position = Vector2(602, 309)
+position = Vector2(643.08, 315.54)
 texture = ExtResource("2_3iunn")
 
 [node name="Settingbutton" type="Button" parent="Frame2"]
@@ -55,10 +54,11 @@ offset_bottom = 44.0
 theme_type_variation = &"FlatButton"
 theme_override_font_sizes/font_size = 25
 text = "Setting"
+metadata/_edit_use_anchors_ = true
 
 [node name="Frame3" type="Sprite2D" parent="."]
 texture_filter = 1
-position = Vector2(606, 461)
+position = Vector2(646.635, 466.644)
 texture = ExtResource("2_3iunn")
 
 [node name="Exitbutton" type="Button" parent="Frame3"]
@@ -70,8 +70,7 @@ offset_bottom = 44.0
 theme_type_variation = &"FlatButton"
 theme_override_font_sizes/font_size = 25
 text = "Exit"
+metadata/_edit_use_anchors_ = true
 
-[connection signal="focus_entered" from="Frame/Playbutton" to="." method="_on_playbutton_focus_entered"]
-[connection signal="pressed" from="Frame/Playbutton" to="." method="_on_playbutton_pressed"]
-[connection signal="tree_entered" from="Frame/Playbutton" to="." method="_on_playbutton_tree_entered"]
+[connection signal="pressed" from="Frame/Button" to="." method="_on_button_pressed"]
 [connection signal="pressed" from="Frame3/Exitbutton" to="." method="_on_exitbutton_pressed"]
