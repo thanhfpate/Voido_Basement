@@ -131,7 +131,7 @@ shape = SubResource("CircleShape2D_odr31")
 scale = Vector2(0.986087, 1.02825)
 sprite_frames = SubResource("SpriteFrames_83ej2")
 animation = &"Walk_Up"
-frame_progress = 0.790722
+frame_progress = 0.823457
 
 [node name="DetectionArea" type="Area2D" parent="Flan"]
 scale = Vector2(1.98661, 1.9439)
